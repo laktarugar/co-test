@@ -1,9 +1,14 @@
 @import '../constant';
+$task-list-border-color: #808080;
 
 @mixin item-status($color) {
   border-left-color: $color;
+  &.open {
+    border-left-color: $task-list-border-color;
+    border-top: solid 4px $color;
+  }
   .status {
-    font-color: $color;
+    color: $color;
   }
 }
 
@@ -12,13 +17,10 @@
 }
 
 .task-list {
-  font: {
-    color:
-  }
-  $task-list-border-color: #808080;
   border-collapse: collapse;
   width: 100%;
   text-align: left;
+  padding: 1px;
 
   border: solid 2px $task-list-border-color;
   .item {
@@ -33,6 +35,10 @@
     }
     &:first-child {
       border-top: none;
+    }
+
+    &.open .status {
+      background-color: $bg-color;
     }
 
     &.running {

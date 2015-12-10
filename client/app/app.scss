@@ -4,6 +4,7 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
 @import "../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/mixins";
 @import "../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/variables";
 @import '../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/progress-bars';
+@import '_constant.scss';
 
 /**
  * App-wide Styles
@@ -18,7 +19,7 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
 
 body {
   background: {
-    color: #bdbdbd;
+    color: $bg-color;
   };
 }
 

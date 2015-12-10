@@ -9,7 +9,7 @@
     <th>Status</th>
   </tr>
   <tr class="item white-element" ng-repeat-start="task in taskList.list"
-      ng-class="task.status" ng-click="task.__showed = !task.__showed"
+      ng-class="[task.status, taskList.selected === $index ? 'open' : '']" ng-click="taskList.select($index)"
   >
     <td>{{task.changelist}}</td>
     <td>{{task.owner.nick}}</td>
@@ -17,9 +17,10 @@
     <td colspan="3">
       <status-component progress="task.progress" status="task.status"/>
     </td>
-    <td class="status" ng-include="'app/task/templates/statusTitle.html'"></td>
+    <td class="status" rowspan="{{taskList.selected === $index ? 2 : 1}}"
+        ng-include="'app/task/templates/statusTitle.html'"></td>
   </tr>
-  <tr class="item white-element" ng-repeat-end ng-show="task.__showed">
-    <td colspan="7"></td>
+  <tr class="item white-element" ng-repeat-end ng-show="taskList.selected === $index">
+    <td colspan="6" ng-include="'app/task/templates/detail.html'"></td>
   </tr>
 </table>

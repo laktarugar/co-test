@@ -6,10 +6,19 @@ class TaskListCtrl {
   constructor(taskResource) {
     this._taskResource = taskResource;
     this.getList();
+    this.selected = -1;
   }
 
   getList() {
     this.list = this._taskResource.query();
+  }
+
+  select(index) {
+    if (index === this.selected) {
+      this.selected = -1;
+    } else {
+      this.selected = index;
+    }
   }
 }
 
