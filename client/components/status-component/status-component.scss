@@ -1,0 +1,83 @@
+$border-size: 4px;
+$status-component-background: #cbcbcb;
+@mixin status-component-item {
+  border: solid $border-size $status-component-background;
+  background: $status-component-background;
+  display: flex;
+}
+
+@mixin status-component-status($color) {
+  .fa {
+    color: white;
+    background-color: $color;
+  }
+
+  .progress-bar {
+    background-color: $color;
+  }
+  .progress.progress-striped .progress-bar{
+    @include gradient-striped(lighten($color, 10));
+  }
+
+}
+
+$base-z-index: 10;
+
+.status-component {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  z-index: $base-z-index;
+
+  .point-item {
+    @include status-component-item;
+    $size: 20px;
+    border-radius: 50%;
+    text-align: center;
+    vertical-align: middle;
+    font: {
+      size: $size;
+    }
+    z-index: $base-z-index+1;
+    flex: 1 0px;
+    i {
+      height: $size;
+      width: $size;
+      padding: $size/4;
+      border-radius: 50%;
+      z-index: $base-z-index+3;
+    }
+  }
+  .progress-item {
+    .progress {
+      width: 100%;
+      margin: 0;
+      background-color: $status-component-background;
+    }
+    @include status-component-item;
+    margin: -($border-size);
+    z-index: $base-z-index+2;
+    border: {
+      left: none;
+      right: none;
+    }
+    flex: 0 100%;
+  }
+
+  &.running{
+    @include status-component-status($color-progress);
+  }
+
+  &.passed {
+    @include status-component-status($color-success);
+  }
+
+  &.failed {
+    @include status-component-status($color-warning);
+  }
+
+  &.pending {
+    @include status-component-status($color-pending);
+  }
+}

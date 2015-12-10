@@ -1,0 +1,55 @@
+@import '../constant';
+
+@mixin item-status($color) {
+  border-left-color: $color;
+  .status {
+    font-color: $color;
+  }
+}
+
+.white-element{
+  background: white;
+}
+
+.task-list {
+  font: {
+    color:
+  }
+  $task-list-border-color: #808080;
+  border-collapse: collapse;
+  width: 100%;
+  text-align: left;
+
+  border: solid 2px $task-list-border-color;
+  .item {
+    td, th {
+      padding: 10px;
+    }
+
+    border: {
+      top: solid 1px $task-list-border-color;
+      left: solid 4px $color-default;
+      bottom: none;
+    }
+    &:first-child {
+      border-top: none;
+    }
+
+    &.running {
+      @include item-status($color-progress);
+    }
+
+    &.passed {
+      @include item-status($color-success);
+    }
+
+    &.failed {
+      @include item-status($color-warning);
+    }
+
+    &.pending {
+      @include item-status($color-pending);
+    }
+  }
+
+}

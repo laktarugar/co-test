@@ -1,0 +1,25 @@
+<table ng-controller="TaskListCtrl as taskList" class="task-list">
+  <tr class="item white-element">
+    <th>changelist</th>
+    <th>Owner</th>
+    <th>Time Started</th>
+    <th>Build</th>
+    <th>Unit Test</th>
+    <th>Functional test</th>
+    <th>Status</th>
+  </tr>
+  <tr class="item white-element" ng-repeat-start="task in taskList.list"
+      ng-class="task.status" ng-click="task.__showed = !task.__showed"
+  >
+    <td>{{task.changelist}}</td>
+    <td>{{task.owner.nick}}</td>
+    <td>{{task.timeStarted | date : 'short'}}</td>
+    <td colspan="3">
+      <status-component progress="task.progress" status="task.status"/>
+    </td>
+    <td class="status" ng-include="'app/task/templates/statusTitle.html'"></td>
+  </tr>
+  <tr class="item white-element" ng-repeat-end ng-show="task.__showed">
+    <td colspan="7"></td>
+  </tr>
+</table>

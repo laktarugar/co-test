@@ -1,0 +1,19 @@
+<div class="status-component" ng-class="status">
+  <div class="point-item" ng-repeat-start="item in progress">
+    <i ng-show="item.status" class="fa"
+      ng-class="{
+        'fa-spinner': item.status==='pending',
+        'fa-check': item.status==='passed',
+        'fa-refresh': item.status==='running',
+        'fa-times': item.status==='failed'
+        }"
+    ></i>
+    <i ng-show="!item.status"></i>
+  </div>
+  <div class="progress-item" ng-repeat-end ng-if="!$last">
+    <div class="progress">
+      <div class="progress-bar" ng-style="{width: item.progress*100 + '%'}">
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+<span ng-switch="task.status">
+  <i ng-switch-when="passed" class="fa fa-check-circle-o"></i>
+  <i ng-switch-when="pending" class="fa fa-spinner"></i>
+  <i ng-switch-when="running" class="fa fa-refresh"></i>
+  <i ng-switch-when="failed" class="fa fa-times-circle-o"></i>
+  {{task.status | limitTo : 1 | uppercase }}{{task.status | limitTo : 1000: 1 | lowercase }}
+</span>
