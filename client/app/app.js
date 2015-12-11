@@ -10,7 +10,7 @@ angular.module('crossoverApp', [
     $stateProvider
       .state('main', {
         url: '/',
-        templateUrl: './app/task/task.html'
+        templateUrl: 'app/task/task.html'
       });
   })
   .config(function($urlRouterProvider, $locationProvider) {
