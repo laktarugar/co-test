@@ -20,6 +20,25 @@ class TaskListCtrl {
       this.selected = index;
     }
   }
+
+  formatDataForProgressBar(record) {
+    if (angular.isUndefined(record.$prorogress)) {
+      record.$prorogress = [
+        {
+          status: record.build.release === null ? record.build.debug : record.build.release,
+          progress: record.unitTest.progress | 0
+        },
+        {
+          status: record.unitTest.status,
+          progress: record.functionalTest.progress | 0
+        },
+        {
+          status: record.functionalTest.status
+        }
+      ];
+    }
+    return record.$prorogress;
+  }
 }
 
 angular
