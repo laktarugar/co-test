@@ -26,15 +26,21 @@ $task-list-border-color: #808080;
   table-layout: fixed;
   .item {
     // animation
-    transition: all 500ms;
+    transition: height 500ms;
 
     cursor: pointer;
     .cell, td, th {
       padding: 10px;
+      &.width-10per {
+        width: 10%;
+      }
+      &.width-15per {
+        width: 15%;
+      }
     }
 
     .same {
-      width: 14%;
+      width: 15%;
       text-align: center;
     }
 

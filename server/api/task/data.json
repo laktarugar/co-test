@@ -82,8 +82,8 @@
     "functionalTest": {
       "coverage": 0.53,
       "test": {
-        "skipped": 16,
-        "passed": 223
+        "skipped": 1,
+        "passed": 50
       },
       "status": "passed"
     },

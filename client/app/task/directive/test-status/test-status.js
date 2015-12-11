@@ -6,8 +6,12 @@
 class TestStatusController {
   options = {
     chart: {
+      // rotate pie
+      startAngle: (d) => d.startAngle+Math.PI/4,
+      endAngle: (d) => d.endAngle+Math.PI/4,
       type: 'pieChart',
       height: 140,
+      width: 250,
       x: (d) => d.key,
       y: (d) => d.value,
       duration: 500,
@@ -15,12 +19,9 @@ class TestStatusController {
       legendPosition: 'right',
       showLabel: false,
       disableTooltip: true,
-      transition: {
-        duration: 100
-      },
       color: [
-        '#1ab394',
         '#f8ac59',
+        '#1ab394',
         '#ed5565'
       ],
       margin: {
@@ -40,7 +41,7 @@ class TestStatusController {
 
   constructor() {
     if (!angular.isUndefined(this.report.test)) {
-      this.data = [PassStatus, 'skipped', FailStatus].map((key) => ({
+      this.data = ['skipped', PassStatus, FailStatus].map((key) => ({
         key,
         value: this.report.test[key] ? this.report.test[key] : 0
       }));
