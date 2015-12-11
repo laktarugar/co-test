@@ -23,9 +23,19 @@ $task-list-border-color: #808080;
   padding: 1px;
 
   border: solid 2px $task-list-border-color;
+  table-layout: fixed;
   .item {
-    td, th {
+    // animation
+    transition: all 500ms;
+
+    cursor: pointer;
+    .cell, td, th {
       padding: 10px;
+    }
+
+    .same {
+      width: 14%;
+      text-align: center;
     }
 
     border: {
@@ -37,8 +47,17 @@ $task-list-border-color: #808080;
       border-top: none;
     }
 
+    &.hidden {
+      td, th {
+        height: 0;
+      }
+    }
     &.open .status {
       background-color: $bg-color;
+    }
+
+    .status {
+      transition: background-color 500ms;
     }
 
     &.running {
@@ -58,4 +77,9 @@ $task-list-border-color: #808080;
     }
   }
 
+  .detail {
+    transition: height 500ms;
+
+  }
 }
+

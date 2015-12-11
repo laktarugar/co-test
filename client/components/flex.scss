@@ -1,0 +1,37 @@
+.flex-container {
+  display: flex;
+  flex: {
+    direction: row;
+  }
+  &.vertical-align {
+    align-items: center;
+  }
+  .flex-item {
+    display: block;
+    flex: 1;
+    width: 100%;
+
+    &.flex-x2 {
+
+      flex: {
+        grow: 2;
+      }
+    }
+    &.flex-x3 {
+      flex: {
+        grow: 3;
+      }
+    }
+    &.flex-item-50 {
+      width: 50px;
+      min-width: 50px;
+      max-width: 50px;
+    }
+    &.flex-item-300 {
+      width: 300px;
+      min-width: 300px;
+      max-width: 300px;
+    }
+  }
+
+}

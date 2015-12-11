@@ -3,7 +3,12 @@
  */
 angular
   .module('crossoverApp.task')
-  .factory('taskResource', taskResource);
+  .factory('TaskResource', taskResource);
+
+const PendingStatus = 'pending',
+  PassStatus = 'passed',
+  FailStatus = 'failed',
+  RunStatus = 'running';
 
 
 
@@ -15,8 +20,6 @@ function taskResource($http) {
 
       response.$promise = $http.get(TaskResource.url)
         .then((httpResponse) => {
-          console.log('httpResponse',httpResponse.data);
-
           httpResponse.data.forEach((item) => {
             response.push(new TaskResource(item));
           });
@@ -26,23 +29,27 @@ function taskResource($http) {
     };
 
     constructor(data) {
-      Object.assign(this, data);
+      _.extend(this, data);
     }
 
     get status() {
-      if (this.build.debug === 'failed' ||
-        this.build.relise === 'failed' ||
-        this.unitTest.status === 'failed' ||
-        this.functionalTest.status === 'failed') {
-        return 'failed';
-      } else if (this.build.debug === 'passed' &&
-        this.build.relise === 'passed' &&
-        this.unitTest.status === 'passed' &&
-        this.functionalTest.status === 'passed' ) {
-        return 'passed';
+      if (this.build.debug === FailStatus ||
+        this.build.release === FailStatus ||
+        this.unitTest.status === FailStatus ||
+        this.functionalTest.status === FailStatus) {
+
+        return FailStatus;
+      } else if (this.build.debug === PassStatus &&
+        this.build.release === PassStatus &&
+        this.unitTest.status === PassStatus &&
+        this.functionalTest.status === PassStatus ) {
+
+        return PassStatus;
       } else if (this.build.debug === 'pending') {
+
         return 'pending';
       } else {
+
         return 'running';
       }
     }

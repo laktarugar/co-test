@@ -6,6 +6,7 @@ angular
   .module('crossoverApp.task', [
     'ngResource',
 
+    'crossover.task.test-status',
     'status-component'
   ])
 ;

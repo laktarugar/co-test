@@ -1,0 +1,13 @@
+<div class="flex-container">
+  <div class="flex-item">
+    <b>{{tsc.name}}</b>
+    <div>
+      {{tsc.report.coverage * 100 | number:0}}%
+    </div>
+  </div>
+  <div class="flex-item flex-x2">
+    <nvd3 options="tsc.options" data="tsc.data"></nvd3>
+  </div>
+</div>
+
+<pre>{{tsc.report | json}}</pre>

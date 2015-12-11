@@ -3,8 +3,8 @@
  */
 
 class TaskListCtrl {
-  constructor(taskResource) {
-    this._taskResource = taskResource;
+  constructor(TaskResource) {
+    this._taskResource = TaskResource;
     this.getList();
     this.selected = -1;
   }
@@ -22,24 +22,49 @@ class TaskListCtrl {
   }
 
   formatDataForProgressBar(record) {
+    function getProgress(status, progress) {
+      switch(status) {
+        case 'running':
+          return progress;
+        case 'passed':
+        case 'failed':
+          return 1;
+        default:
+          return 0;
+      }
+    }
+
+    function getTestStatus(status) {
+      return status === "running" ? null : status
+    }
+
     if (angular.isUndefined(record.$prorogress)) {
       record.$prorogress = [
         {
-          status: record.build.release === null ? record.build.debug : record.build.release,
-          progress: record.unitTest.progress | 0
+          status: ((build) => {
+            switch(build.debug) {
+              case 'passed':
+                return build.release;
+              default:
+                return build.debug;
+            }
+          })(record.build),
+          progress: getProgress(record.unitTest.status, record.unitTest.progress)
         },
         {
-          status: record.unitTest.status,
-          progress: record.functionalTest.progress | 0
+          status: getTestStatus(record.unitTest.status),
+          progress: getProgress(record.functionalTest.status, record.functionalTest.progress)
         },
         {
-          status: record.functionalTest.status
+          status: getTestStatus(record.functionalTest.status)
         }
       ];
     }
     return record.$prorogress;
   }
 }
+
+TaskListCtrl.$inject = ['TaskResource'];
 
 angular
   .module('crossoverApp.task')

@@ -1,112 +1,374 @@
 [
   {
-    "owner": {
-      "nick": "JName"
+    "functionalTest": {
+      "status": null
     },
-    "progress": [
-      {
-        "progress": 1,
-        "status": "passed"
-      },
-      {
-        "progress": 1,
-        "status": "passed"
-      },
-      {
-        "status": "passed"
-      }
-    ],
-    "timeStarted": "Sun Feb 15 1987 07:50:07 GMT+0000 (UTC)",
-    "status": "passed",
+    "unitTest": {
+      "status": null
+    },
+    "build": {
+      "release": "failed",
+      "debug": "passed"
+    },
+    "owner": {
+      "nick": "Sonja"
+    },
+    "timeStarted": "Sun Jan 08 2012 16:52:52 GMT+0000 (UTC)",
     "changelist": 545266,
-    "_id": "56697eb0d40bfe493a08f325"
+    "_id": "566a9cd9f7bff090c4d7d707"
   },
   {
-    "owner": {
-      "nick": "JName"
+    "functionalTest": {
+      "status": null
     },
-    "progress": [
-      {
-        "progress": 0,
-        "status": "pending"
-      },
-      {
-        "progress": 0,
-        "status": null
-      },
-      {
-        "status": null
-      }
-    ],
-    "timeStarted": "Mon Jun 07 2010 17:22:52 GMT+0000 (UTC)",
-    "status": "pending",
+    "unitTest": {
+      "status": "running",
+      "progress": 0.56
+    },
+    "build": {
+      "release": "passed",
+      "debug": "passed"
+    },
+    "owner": {
+      "nick": "Sheree"
+    },
+    "timeStarted": "Mon Apr 20 1992 16:46:45 GMT+0000 (UTC)",
     "changelist": 545267,
-    "_id": "56697eb081de7485bedfec8f"
+    "_id": "566a9cd97f677b1f1f124224"
   },
   {
-    "owner": {
-      "nick": "JName"
+    "functionalTest": {
+      "status": "running",
+      "progress": 0.25
     },
-    "progress": [
-      {
-        "progress": 1,
-        "status": "passed"
-      },
-      {
-        "progress": 0.75,
-        "status": "running"
-      },
-      {
-        "status": null
-      }
-    ],
-    "timeStarted": "Tue Jun 22 1993 05:40:54 GMT+0000 (UTC)",
-    "status": "running",
+    "unitTest": {
+      "status": "passed"
+    },
+    "build": {
+      "release": "passed",
+      "debug": "passed"
+    },
+    "owner": {
+      "nick": "Leila"
+    },
+    "timeStarted": "Mon Jun 27 1977 08:09:26 GMT+0000 (UTC)",
     "changelist": 545268,
-    "_id": "56697eb0dc084c1a0f9f2f57"
+    "_id": "566a9cd9e8049eb6f3b5541a"
   },
   {
-    "owner": {
-      "nick": "JName"
+    "functionalTest": {
+      "status": null
     },
-    "progress": [
-      {
-        "progress": 1,
-        "status": "passed"
-      },
-      {
-        "progress": 0.75,
-        "status": "running"
-      },
-      {
-        "status": null
-      }
-    ],
-    "timeStarted": "Wed Mar 29 1995 05:42:57 GMT+0000 (UTC)",
-    "status": "running",
+    "unitTest": {
+      "status": null
+    },
+    "build": {
+      "release": null,
+      "debug": "running"
+    },
+    "owner": {
+      "nick": "Lisa"
+    },
+    "timeStarted": "Thu Feb 06 1997 15:25:55 GMT+0000 (UTC)",
     "changelist": 545269,
-    "_id": "56697eb037121166ca15c290"
+    "_id": "566a9cd916abfa2ec3ebeb6a"
   },
   {
-    "owner": {
-      "nick": "JName"
+    "functionalTest": {
+      "status": null
     },
-    "progress": [
-      {
-        "progress": 1,
-        "status": "passed"
-      },
-      {
-        "progress": 1,
-        "status": "failed"
-      },
-      {
-        "status": null
-      }
-    ],
-    "timeStarted": "Thu Oct 21 1976 07:30:39 GMT+0000 (UTC)",
-    "status": "failed",
+    "unitTest": {
+      "status": null
+    },
+    "build": {
+      "release": null,
+      "debug": "pending"
+    },
+    "owner": {
+      "nick": "Cantrell"
+    },
+    "timeStarted": "Mon Sep 28 1987 10:44:12 GMT+0000 (UTC)",
     "changelist": 545270,
-    "_id": "56697eb0ad5a92662534abb6"
+    "_id": "566a9cd9b653a274936515bd"
+  },
+  {
+    "functionalTest": {
+      "status": null
+    },
+    "unitTest": {
+      "status": null
+    },
+    "build": {
+      "release": null,
+      "debug": "pending"
+    },
+    "owner": {
+      "nick": "Crawford"
+    },
+    "timeStarted": "Mon May 18 1987 01:20:52 GMT+0000 (UTC)",
+    "changelist": 545271,
+    "_id": "566a9cd9f263be712346fab3"
+  },
+  {
+    "functionalTest": {
+      "status": null
+    },
+    "unitTest": {
+      "status": null
+    },
+    "build": {
+      "release": null,
+      "debug": "pending"
+    },
+    "owner": {
+      "nick": "Fletcher"
+    },
+    "timeStarted": "Fri Feb 20 1970 01:46:30 GMT+0000 (UTC)",
+    "changelist": 545272,
+    "_id": "566a9cd9cdcab9745779e3e0"
+  },
+  {
+    "functionalTest": {
+      "status": null
+    },
+    "unitTest": {
+      "status": null
+    },
+    "build": {
+      "release": null,
+      "debug": "pending"
+    },
+    "owner": {
+      "nick": "Tracey"
+    },
+    "timeStarted": "Fri Apr 25 1986 07:43:35 GMT+0000 (UTC)",
+    "changelist": 545273,
+    "_id": "566a9cd9684c11128a9cb2e2"
+  },
+  {
+    "functionalTest": {
+      "status": null
+    },
+    "unitTest": {
+      "status": null
+    },
+    "build": {
+      "release": null,
+      "debug": "pending"
+    },
+    "owner": {
+      "nick": "Angeline"
+    },
+    "timeStarted": "Sat Sep 05 1970 09:18:16 GMT+0000 (UTC)",
+    "changelist": 545274,
+    "_id": "566a9cd900ab66d1623cbc4c"
+  },
+  {
+    "functionalTest": {
+      "status": null
+    },
+    "unitTest": {
+      "status": null
+    },
+    "build": {
+      "release": "running",
+      "debug": "passed"
+    },
+    "owner": {
+      "nick": "Rosa"
+    },
+    "timeStarted": "Sat Dec 27 1986 09:30:26 GMT+0000 (UTC)",
+    "changelist": 545275,
+    "_id": "566a9cd97b2832197191b43f"
+  },
+  {
+    "functionalTest": {
+      "status": null
+    },
+    "unitTest": {
+      "status": null
+    },
+    "build": {
+      "release": null,
+      "debug": "running"
+    },
+    "owner": {
+      "nick": "Janie"
+    },
+    "timeStarted": "Thu Aug 29 2002 07:01:48 GMT+0000 (UTC)",
+    "changelist": 545276,
+    "_id": "566a9cd9b2cab66b225d6fbe"
+  },
+  {
+    "functionalTest": {
+      "status": null
+    },
+    "unitTest": {
+      "test": {
+        "failed": 4,
+        "skiped": 416,
+        "passed": 2237
+      },
+      "status": "failed"
+    },
+    "build": {
+      "release": "passed",
+      "debug": "passed"
+    },
+    "owner": {
+      "nick": "Francisca"
+    },
+    "timeStarted": "Fri Jul 18 2003 06:08:59 GMT+0000 (UTC)",
+    "changelist": 545277,
+    "_id": "566a9cd98f4dd9aff4925448"
+  },
+  {
+    "functionalTest": {
+      "status": null
+    },
+    "unitTest": {
+      "status": null
+    },
+    "build": {
+      "release": null,
+      "debug": "pending"
+    },
+    "owner": {
+      "nick": "Tania"
+    },
+    "timeStarted": "Fri Aug 17 1979 00:28:48 GMT+0000 (UTC)",
+    "changelist": 545278,
+    "_id": "566a9cd902a7c130e958ea80"
+  },
+  {
+    "functionalTest": {
+      "status": null
+    },
+    "unitTest": {
+      "status": null
+    },
+    "build": {
+      "release": null,
+      "debug": "running"
+    },
+    "owner": {
+      "nick": "Kathryn"
+    },
+    "timeStarted": "Sun Jan 08 1978 03:23:09 GMT+0000 (UTC)",
+    "changelist": 545279,
+    "_id": "566a9cd93ad0cacdcae678bf"
+  },
+  {
+    "functionalTest": {
+      "status": null
+    },
+    "unitTest": {
+      "test": {
+        "failed": 1,
+        "skiped": 5,
+        "passed": 2013
+      },
+      "status": "failed"
+    },
+    "build": {
+      "release": "passed",
+      "debug": "passed"
+    },
+    "owner": {
+      "nick": "Pansy"
+    },
+    "timeStarted": "Sun Apr 26 1970 21:23:13 GMT+0000 (UTC)",
+    "changelist": 545280,
+    "_id": "566a9cd9fbe4a2a4d1ed2cfe"
+  },
+  {
+    "functionalTest": {
+      "status": null
+    },
+    "unitTest": {
+      "status": null
+    },
+    "build": {
+      "release": "running",
+      "debug": "passed"
+    },
+    "owner": {
+      "nick": "Loraine"
+    },
+    "timeStarted": "Tue Dec 11 1990 15:02:20 GMT+0000 (UTC)",
+    "changelist": 545281,
+    "_id": "566a9cd96164e5e3f7c005f3"
+  },
+  {
+    "functionalTest": {
+      "status": null
+    },
+    "unitTest": {
+      "status": null
+    },
+    "build": {
+      "release": "failed",
+      "debug": "passed"
+    },
+    "owner": {
+      "nick": "Skinner"
+    },
+    "timeStarted": "Fri Jul 25 2014 18:49:14 GMT+0000 (UTC)",
+    "changelist": 545282,
+    "_id": "566a9cd922be33974760ee98"
+  },
+  {
+    "functionalTest": {
+      "status": null
+    },
+    "unitTest": {
+      "status": null
+    },
+    "build": {
+      "release": null,
+      "debug": "failed"
+    },
+    "owner": {
+      "nick": "Wise"
+    },
+    "timeStarted": "Tue Jul 02 2013 14:18:23 GMT+0000 (UTC)",
+    "changelist": 545283,
+    "_id": "566a9cd9ecfe8344a23a1670"
+  },
+  {
+    "functionalTest": {
+      "status": null
+    },
+    "unitTest": {
+      "status": null
+    },
+    "build": {
+      "release": null,
+      "debug": "pending"
+    },
+    "owner": {
+      "nick": "Bette"
+    },
+    "timeStarted": "Sat Aug 04 2001 19:07:39 GMT+0000 (UTC)",
+    "changelist": 545284,
+    "_id": "566a9cd94edfc3e3ad0ea649"
+  },
+  {
+    "functionalTest": {
+      "status": null
+    },
+    "unitTest": {
+      "status": null
+    },
+    "build": {
+      "release": "running",
+      "debug": "passed"
+    },
+    "owner": {
+      "nick": "Kristie"
+    },
+    "timeStarted": "Thu May 08 1980 15:45:48 GMT+0000 (UTC)",
+    "changelist": 545285,
+    "_id": "566a9cd973c3ca17ec673584"
   }
 ]

@@ -1,11 +1,12 @@
-<table ng-controller="TaskListCtrl as taskList" class="task-list">
+<div ng-controller="TaskListCtrl as taskList">
+  <table class="task-list">
   <tr class="item white-element">
-    <th>changelist</th>
+    <th>Changelist</th>
     <th>Owner</th>
     <th>Time Started</th>
-    <th>Build</th>
-    <th>Unit Test</th>
-    <th>Functional test</th>
+    <th class="same">Build</th>
+    <th class="same">Unit Test</th>
+    <th class="same">Functional test</th>
     <th>Status</th>
   </tr>
   <tr class="item white-element" ng-repeat-start="task in taskList.list"
@@ -15,12 +16,16 @@
     <td>{{task.owner.nick}}</td>
     <td>{{task.timeStarted | date : 'short'}}</td>
     <td colspan="3">
-      <status-component progress="task.progress" status="task.status"/>
+      <status-component progress="::taskList.formatDataForProgressBar(task)" status="::task.status"/>
     </td>
     <td class="status" rowspan="{{taskList.selected === $index ? 2 : 1}}"
         ng-include="'app/task/templates/statusTitle.html'"></td>
   </tr>
   <tr class="item white-element" ng-repeat-end ng-show="taskList.selected === $index">
-    <td colspan="6" ng-include="'app/task/templates/detail.html'"></td>
+    <td colspan="6" class="detail">
+      <div ng-if="taskList.selected === $index" ng-include="'app/task/templates/detail.html'"></div>
+    </td>
   </tr>
-</table>
+
+  </table>
+</div>

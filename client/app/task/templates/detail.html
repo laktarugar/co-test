@@ -1,1 +1,46 @@
-detail
+<pre>{{task | json}}</pre>
+<div class="flex-container">
+  <div class="flex-item">
+    <div class="flex-container">
+      <!--build header-->
+      <div class="flex-item">
+        <div>Build</div>
+        <div>
+          <i class="fa fa-clock-o"></i>
+          {{task.timeStarted | date : 'shortTime'}}
+        </div>
+      </div>
+      <!--build debug-->
+      <div class="flex-item">
+        <div class="fa fa-folder-o fa-3x">
+          <i class="fa fa-plus-circle-o"></i>
+        </div>
+        <div>
+          <a href="#">Debug</a>
+        </div>
+      </div>
+      <!--build release-->
+      <div class="flex-item">
+        <div class="fa fa-folder-o fa-3x">
+          <i class="fa fa-plus-circle-o"></i>
+        </div>
+        <div>
+          <a href="#">Release</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="flex-item flex-item-50">
+    <i class="fa fa-chevron-right"></i>
+  </div>
+  <div class="flex-item">
+    <test-status report="task.unitTest"  name="Unit test"></test-status>
+  </div>
+  <div class="flex-item flex-item-50">
+    <i class="fa fa-chevron-right"></i>
+  </div>
+  <div class="flex-item">
+    <test-status report="task.functionalTest" name="Functional test"></test-status>
+  </div>
+</div>

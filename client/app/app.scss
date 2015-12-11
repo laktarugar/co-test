@@ -21,6 +21,11 @@ body {
   background: {
     color: $bg-color;
   };
+  color: #434343;
+  font: {
+    size: 12px;
+    family: Arial;
+  }
 }
 
 // update progress bar
@@ -43,5 +48,6 @@ body {
 // injector
 @import '_constant.scss';
 @import 'task/list.scss';
+@import '../components/flex.scss';
 @import '../components/status-component/status-component.scss';
 // endinjector
