@@ -23,9 +23,30 @@ body {
   };
   color: #434343;
   font: {
-    size: 12px;
+    size: $base-font-size;
     family: Arial;
   }
+}
+
+.font-2x {
+  font-size: $base-font-size*1.25;
+}
+
+.font-3x {
+  font-size: $base-font-size*1.5;
+}
+
+.font-4x {
+  font-size: $base-font-size*2;
+}
+
+.text-muted {
+  color: #CBCBCB;
+}
+
+nvd3 {
+  display: block;
+  min-width: 240px;
 }
 
 // update progress bar
@@ -44,9 +65,14 @@ body {
   }
 }
 
+.highlighted-text-font {
+  @include highlighted-text-font;
+}
+
 // Component styles are injected through grunt
 // injector
 @import '_constant.scss';
+@import '_status.scss';
 @import 'task/list.scss';
 @import '../components/flex.scss';
 @import '../components/status-component/status-component.scss';

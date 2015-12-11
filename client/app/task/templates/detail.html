@@ -7,12 +7,12 @@
         <div>Build</div>
         <div>
           <i class="fa fa-clock-o"></i>
-          {{task.timeStarted | date : 'shortTime'}}
+          {{task.build.timeSpend | date : 'm.ss'}}
         </div>
       </div>
       <!--build debug-->
-      <div class="flex-item">
-        <div class="fa fa-folder-o fa-3x">
+      <div class="flex-item" ng-class="task.build.debug">
+        <div class="fa fa-folder-o fa-3x status-text-color">
           <i class="fa fa-plus-circle-o"></i>
         </div>
         <div>
@@ -20,8 +20,8 @@
         </div>
       </div>
       <!--build release-->
-      <div class="flex-item">
-        <div class="fa fa-folder-o fa-3x">
+      <div class="flex-item" ng-class="task.build.release">
+        <div class="fa fa-folder-o fa-3x status-text-color">
           <i class="fa fa-plus-circle-o"></i>
         </div>
         <div>
@@ -31,16 +31,16 @@
     </div>
 
   </div>
-  <div class="flex-item flex-item-50">
-    <i class="fa fa-chevron-right"></i>
+  <div class="flex-item flex-item-50 flex-vertical-center">
+    <i class="fa fa-chevron-right fa-2x text-muted"></i>
   </div>
-  <div class="flex-item">
-    <test-status report="task.unitTest"  name="Unit test"></test-status>
+  <div class="flex-item flex-x2">
+    <test-status report="task.unitTest" name="Unit test"></test-status>
   </div>
-  <div class="flex-item flex-item-50">
-    <i class="fa fa-chevron-right"></i>
+  <div class="flex-item flex-item-50 flex-vertical-center">
+    <i class="fa fa-chevron-right fa-2x text-muted"></i>
   </div>
-  <div class="flex-item">
+  <div class="flex-item  flex-x2">
     <test-status report="task.functionalTest" name="Functional test"></test-status>
   </div>
 </div>

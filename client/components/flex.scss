@@ -32,6 +32,9 @@
       min-width: 300px;
       max-width: 300px;
     }
+    &.flex-vertical-center {
+      align-self: center;
+    }
   }
 
 }

@@ -1,3 +1,5 @@
+$base-font-size: 12px;
+
 $bg-color: #f3f3f4;
 
 $color-default: #d2d2d2;
@@ -5,3 +7,10 @@ $color-pending: #f8ac59;
 $color-success: #1ab394;
 $color-progress: #1c84c6;
 $color-warning: #ed5565;
+
+@mixin highlighted-text-font() {
+  font: {
+    size: $base-font-size*1.5;
+    weight: bold;
+  }
+}

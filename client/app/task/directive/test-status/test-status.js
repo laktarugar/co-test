@@ -8,17 +8,25 @@ class TestStatusController {
     chart: {
       type: 'pieChart',
       height: 140,
-      x: function (d) {
-        return d.key;
-      },
-      y: function (d) {
-        return d.y;
-      },
-      showLabels: true,
+      x: (d) => d.key,
+      y: (d) => d.value,
       duration: 500,
       labelThreshold: 0.01,
-      labelSunbeamLayout: true,
       legendPosition: 'right',
+      showLabel: false,
+      disableTooltip: true,
+      transition: {
+        duration: 100
+      },
+      color: [
+        '#1ab394',
+        '#f8ac59',
+        '#ed5565'
+      ],
+      margin: {
+        top: 5, right: 5, bottom: 5, left: 5
+      },
+      labelType: 'y',
       legend: {
         margin: {
           top: 5,
@@ -31,17 +39,12 @@ class TestStatusController {
   };
 
   constructor() {
-    console.log(this.report);
-    this.data =  [
-      {
-        key: this.report.done,
-        y: this.report.done
-      },
-      {
-        key: this.report.skip,
-        y: this.report.skip
-      }
-    ];
+    if (!angular.isUndefined(this.report.test)) {
+      this.data = [PassStatus, 'skipped', FailStatus].map((key) => ({
+        key,
+        value: this.report.test[key] ? this.report.test[key] : 0
+      }));
+    }
   }
 }
 

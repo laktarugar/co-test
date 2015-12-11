@@ -1,0 +1,21 @@
+@import 'constant';
+
+@mixin status-text-color($color){
+  .status-text-color {
+    color: $color;
+  }
+}
+
+@include status-text-color($color-pending);
+
+.running {
+  @include status-text-color($color-progress);
+}
+
+.passed {
+  @include status-text-color($color-success);
+}
+
+.failed {
+  @include status-text-color($color-warning);
+}

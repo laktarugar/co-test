@@ -42,7 +42,12 @@
       "progress": 0.25
     },
     "unitTest": {
-      "status": "passed"
+      "status": "passed",
+      "coverage": 0.53,
+      "test": {
+        "skipped": 16,
+        "passed": 223
+      }
     },
     "build": {
       "release": "passed",
@@ -75,14 +80,25 @@
   },
   {
     "functionalTest": {
-      "status": null
+      "coverage": 0.53,
+      "test": {
+        "skipped": 16,
+        "passed": 223
+      },
+      "status": "passed"
     },
     "unitTest": {
-      "status": null
+      "coverage": 0.53,
+      "test": {
+        "skipped": 16,
+        "passed": 223
+      },
+      "status": "passed"
     },
     "build": {
-      "release": null,
-      "debug": "pending"
+      "timeSpend": 380,
+      "release": "passed",
+      "debug": "passed"
     },
     "owner": {
       "nick": "Cantrell"
@@ -204,9 +220,10 @@
       "status": null
     },
     "unitTest": {
+      "coverage": 0.88,
       "test": {
         "failed": 4,
-        "skiped": 416,
+        "skipped": 416,
         "passed": 2237
       },
       "status": "failed"
@@ -265,7 +282,7 @@
     "unitTest": {
       "test": {
         "failed": 1,
-        "skiped": 5,
+        "skipped": 5,
         "passed": 2013
       },
       "status": "failed"

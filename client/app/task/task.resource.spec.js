@@ -60,6 +60,12 @@ describe('task resource', () => {
       expect(testR.status).toBe(FailStatus);
     });
 
+    it('if failed functional tests then status will be failed', () => {
+      testR.functionalTest.status = FailStatus;
+
+      expect(testR.status).toBe(FailStatus);
+    });
+
   });
 
 });

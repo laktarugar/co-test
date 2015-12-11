@@ -11,7 +11,6 @@ const PendingStatus = 'pending',
   RunStatus = 'running';
 
 
-
 function taskResource($http) {
   class TaskResource {
     static url = '/api/task';
@@ -30,6 +29,18 @@ function taskResource($http) {
 
     constructor(data) {
       _.extend(this, data);
+    }
+
+    set timeStarted(_) {
+      if (angular.isDate(_)) {
+        this._timeStarted = _;
+      } else {
+        this._timeStarted = new Date(_);
+      }
+    }
+
+    get timeStarted() {
+      return this._timeStarted;
     }
 
     get status() {

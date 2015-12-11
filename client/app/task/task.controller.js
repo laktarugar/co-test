@@ -21,6 +21,12 @@ class TaskListCtrl {
     }
   }
 
+  /**
+   * get progress for test
+   *
+   * @param record
+   * @returns {Array}
+   */
   formatDataForProgressBar(record) {
     function getProgress(status, progress) {
       switch(status) {

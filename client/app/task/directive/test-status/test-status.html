@@ -1,13 +1,18 @@
-<div class="flex-container">
+<div class="flex-container" ng-class="tsc.report.status || pending">
   <div class="flex-item">
-    <b>{{tsc.name}}</b>
-    <div>
-      {{tsc.report.coverage * 100 | number:0}}%
+    <b class="font-2x text-muted">{{tsc.name}}</b>
+    <div ng-show="tsc.report.coverage">
+      <span class="status-text-color highlighted-text-font">{{tsc.report.coverage * 100 | number:0}}</span>%
     </div>
   </div>
-  <div class="flex-item flex-x2">
-    <nvd3 options="tsc.options" data="tsc.data"></nvd3>
+  <div class="flex-item flex-x3">
+    <nvd3 options="tsc.options" data="tsc.data" ng-if="tsc.data"></nvd3>
+    <div ng-show="!tsc.data" ng-switch="tsc.report.status">
+      Status:
+      <span class="status-text-color highlighted-text-font" ng-switch-when="pending">Waiting</span>
+      <span class="status-text-color highlighted-text-font" ng-switch-when="running">In progress</span>
+      <span class="status-text-color highlighted-text-font" ng-switch-when="failed">Failed</span>
+      <span class="status-text-color highlighted-text-font" ng-switch-default="null">Can't run</span>
+    </div>
   </div>
 </div>
-
-<pre>{{tsc.report | json}}</pre>
